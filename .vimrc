@@ -33,16 +33,12 @@ set wildmenu
 set wildignore=*.o,*.obj,*~
 
 " Show trailing whitespace.
-set nolist
-set listchars=trail:.
+set list
+set listchars=trail:.,tab:\ \
 
 " Key mapping
 noremap <F9> :set invspell <CR>
 map Y y$
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -63,6 +59,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'vim-scripts/minibufexpl.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/netrw.vim'
+Bundle 'vim-scripts/omnicppcomplete'
 " end of vundle stuff, run :BundleInstall to update
 
 " statusline
